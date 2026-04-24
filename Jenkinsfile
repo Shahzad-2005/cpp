@@ -29,4 +29,14 @@ pipeline
     }
   }
   }
+post {
+  //the condition here will execute after the build is done...
+always{
+  echo 'Post build condition running...'
+}
+failure  {
+  echo 'Post action if build failed...'
+}
+}
+  
 }
